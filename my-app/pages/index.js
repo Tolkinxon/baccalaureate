@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
+import indexSass from '../styles/index.module.scss'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -24,6 +25,7 @@ export default function Home() {
       <div className="container">
         hello world
         <button className="btn btn-primary">hello</button>
+        <p className={indexSass.p}>world hello</p>
       </div>
     </>
   )
