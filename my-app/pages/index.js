@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import indexSass from '../styles/index.module.scss'
+import Groups from '@/components/Groups'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,8 +18,16 @@ export default function Home() {
         className={`container-fluid border border-3 border-dark hj${indexSass.Container}`}
       >
         <div className="row">
-          <div className="col-3 bg-success ">a</div>
-          <div className="col-6 bg-warning ">s</div>
+          <div className="col-3 bg-success ">
+            <h1>O'quvchilar</h1>
+          </div>
+
+          {/* ALL DATA SHIWING SIDE */}
+          <div className="col-6   ">
+            <Groups />
+          </div>
+          {/* ALL DATA SHIWING SIDE */}
+
           <div className="col-3 bg-secondary  ">d</div>
         </div>
       </div>
