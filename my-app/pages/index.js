@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import indexSass from '../styles/index.module.scss'
 import Groups from '@/components/Groups'
+import SelectingThemesAndTimes from '@/components/SelectingThemesAndTimes'
 import Information from '@/components/Information'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -16,33 +17,27 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={`container-fluid  ${indexSass.Container}`}>
-
         <div className="row">
-
-          {/************* SELECTING SIDE **************/}
-          <div className="col-3 bg-dark ">
+          {/************* PMARY SELECTING SIDE **************/}
+          <div className="col-2 bg-dark ">
             <h1 style={{ color: 'white' }}>O'quvchilar</h1>
           </div>
-          {/************* SELECTING SIDE **************/}
-
+          {/************* PMARY SELECTING SIDE **************/}
 
           {/************* ALL DATA SHOWING SIDE **************/}
-          <div className="col-5 shadow m-3">
-
+          <div className="col shadow m-3">
             {/* SELECTING THEMES AND TIMES  */}
-          
+            <SelectingThemesAndTimes />
             {/* SELECTING THEMES AND TIMES  */}
             <Groups />
-          </div>  
+          </div>
           {/************* ALL DATA SHOWING SIDE **************/}
-
 
           {/************* SHOWING SECONDARY INFORMATIONS  ************/}
           <div className="col-3 shadow m-3">
             <Information />
           </div>
           {/************* SHOWING SECONDARY INFORMATIONS  ************/}
-
         </div>
       </div>
 
