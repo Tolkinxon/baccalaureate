@@ -1,5 +1,19 @@
 .Container {
+  position: relative;
   width: 100%;
+  overflow: hidden;
+  transition: all 1s ease;
+  padding: 0px;
+  ul {
+    width: 100%;
+    color: white;
+    transition: all 0.5s ease;
+    position: absolute;
+    bottom: 0px;
+    li {
+      list-style-type: circle;
+    }
+  }
 }
 
 .button {
@@ -10,8 +24,10 @@
   color: white;
   background-color: transparent;
   border: none;
+
   span {
-    font-size: 10px;
+    font-family: sans-serif;
+    font-size: 13px;
     margin-left: 3px;
   }
 }
