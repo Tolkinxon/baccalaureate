@@ -15,23 +15,34 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div
-        className={`container-fluid border border-3  ${indexSass.Container}`}
-      >
+      <div className={`container-fluid  ${indexSass.Container}`}>
+
         <div className="row">
+
+          {/************* SELECTING SIDE **************/}
           <div className="col-3 bg-dark ">
             <h1 style={{ color: 'white' }}>O'quvchilar</h1>
           </div>
+          {/************* SELECTING SIDE **************/}
 
-          {/* ALL DATA SHIWING SIDE */}
+
+          {/************* ALL DATA SHOWING SIDE **************/}
           <div className="col-5 shadow m-3">
-            <Groups />
-          </div>
-          {/* ALL DATA SHIWING SIDE */}
 
+            {/* SELECTING THEMES AND TIMES  */}
+          
+            {/* SELECTING THEMES AND TIMES  */}
+            <Groups />
+          </div>  
+          {/************* ALL DATA SHOWING SIDE **************/}
+
+
+          {/************* SHOWING SECONDARY INFORMATIONS  ************/}
           <div className="col-3 shadow m-3">
             <Information />
           </div>
+          {/************* SHOWING SECONDARY INFORMATIONS  ************/}
+
         </div>
       </div>
 
