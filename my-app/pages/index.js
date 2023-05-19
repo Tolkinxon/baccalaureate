@@ -15,11 +15,11 @@ export default function Home() {
       </Head>
 
       <div className="container">
-        hello world
-        <button className="btn btn-primary">hello</button>
-        <p className={indexSass.p}>world hello</p>
-        <input type="text" className="form-control" />
-        <button className="btn btn-secondary">you are welcome</button>
+        <div className="row">
+          <div className="col-3"></div>
+          <div className="col-6"></div> 
+          <div className="col-3"></div>
+        </div>
       </div>
 
       <script src="../styles/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
