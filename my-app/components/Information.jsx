@@ -3,7 +3,7 @@ import React from 'react'
 const Information = () => {
   return (
     <div>
-      <p className="display-3">Ma'lumot</p>
+      <p className="display-6">Ma'lumot</p>
       <table class="table table-borderless">
         <tbody>
           <tr className="row">

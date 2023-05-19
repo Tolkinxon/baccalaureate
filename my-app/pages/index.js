@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import indexSass from '../styles/index.module.scss'
+import PrimarySelectingSide from '../components/PrimarySelectingSide'
 import Groups from '@/components/Groups'
 import SelectingThemesAndTimes from '@/components/SelectingThemesAndTimes'
 import Information from '@/components/Information'
@@ -19,13 +20,13 @@ export default function Home() {
       <div className={`container-fluid  ${indexSass.Container}`}>
         <div className="row">
           {/************* PMARY SELECTING SIDE **************/}
-          <div className="col-2 bg-dark ">
-            <h1 style={{ color: 'white' }}>O'quvchilar</h1>
+          <div className="col bg-dark p-0">
+            <PrimarySelectingSide />
           </div>
           {/************* PMARY SELECTING SIDE **************/}
 
           {/************* ALL DATA SHOWING SIDE **************/}
-          <div className="col shadow m-3">
+          <div className="col-7 shadow m-3">
             {/* SELECTING THEMES AND TIMES  */}
             <SelectingThemesAndTimes />
             {/* SELECTING THEMES AND TIMES  */}
@@ -34,7 +35,7 @@ export default function Home() {
           {/************* ALL DATA SHOWING SIDE **************/}
 
           {/************* SHOWING SECONDARY INFORMATIONS  ************/}
-          <div className="col-3 shadow m-3">
+          <div className="col shadow">
             <Information />
           </div>
           {/************* SHOWING SECONDARY INFORMATIONS  ************/}
