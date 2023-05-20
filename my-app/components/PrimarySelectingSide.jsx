@@ -13,7 +13,8 @@ const PrimarySelectingSide = () => {
       >
         <button
           onClick={() => setToggle(!toggle)}
-          className={`${classes.button} ${toggle && classes.active}`}
+          className={`${classes.button}`}
+          style={{color: toggle ? 'burlywood' : 'white'}}
         >
           <div>
             <svg
