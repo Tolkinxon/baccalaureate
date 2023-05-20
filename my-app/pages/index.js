@@ -18,32 +18,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
-      <div className={`container-fluid  ${indexSass.Container}`}>
-        <div className={`row ${indexSass.row}`}>
-          {/************* PMARY SELECTING SIDE **************/}
-          <div className="col bg-dark p-0">
-            <PrimarySelectingSide />
-          </div>
-          {/************* PMARY SELECTING SIDE **************/}
-
-          {/************* ALL DATA SHOWING SIDE **************/}
-          <div className="col-7 shadow m-3">
-            {/* SELECTING THEMES AND TIMES  */}
-            <SelectingThemesAndTimes />
-            {/* SELECTING THEMES AND TIMES  */}
-            <Groups />
-          </div>
-          {/************* ALL DATA SHOWING SIDE **************/}
-
-          {/************* SHOWING SECONDARY INFORMATIONS  ************/}
-          <div className="col shadow">
-            <Information />
-          </div>
-          {/************* SHOWING SECONDARY INFORMATIONS  ************/}
-        </div>
-      </div>
-
+          <Navbar />
+          <PrimarySelectingSide />
+          <SelectingThemesAndTimes />
+          <Groups />
+          <Information />
       <script src="../styles/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     </>
   )

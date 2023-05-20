@@ -2,7 +2,7 @@ import React from 'react'
 
 const Groups = () => {
   return (
-    <>
+    <div className='groups'>
       <table class="table  table-borderless">
         <thead>
           <tr>
@@ -32,7 +32,7 @@ const Groups = () => {
           </tr>
         </tbody>
       </table>
-    </>
+    </div>
   )
 }
 

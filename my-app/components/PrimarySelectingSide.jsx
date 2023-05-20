@@ -8,7 +8,7 @@ const PrimarySelectingSide = () => {
 
   return (
     <>
-      <div>
+      <div className={classes.primarySelecting}>
         <div
           className={classes.first_line}
           style={{ color: focus === 1 ? 'burlywood' : 'white' }}
@@ -57,7 +57,7 @@ const PrimarySelectingSide = () => {
             <svg
               style={{
                 transition: 'all 0.5s ease',
-                transformOrigin: 'center center',
+                transformOrigin: '10px center',
                 transform: toggle ? 'rotate(-90deg)' : 'rotate(0deg)',
               }}
               xmlns="http://www.w3.org/2000/svg"

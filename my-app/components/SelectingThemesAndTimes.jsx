@@ -2,7 +2,7 @@ import React from 'react'
 
 const SelectingThemesAndTimes = () => {
   return (
-    <div>
+    <div style={{border: '2px solid red'}}>
       <div className="row">
         <div className="col-2">
           <p className="fw-bolder">Mavzular</p>
