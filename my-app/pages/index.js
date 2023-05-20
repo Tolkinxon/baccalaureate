@@ -20,7 +20,7 @@ export default function Home() {
       </Head>
       <Navbar />
       <div className={`container-fluid  ${indexSass.Container}`}>
-        <div className="row">
+        <div className={`row ${indexSass.row}`}>
           {/************* PMARY SELECTING SIDE **************/}
           <div className="col bg-dark p-0">
             <PrimarySelectingSide />
