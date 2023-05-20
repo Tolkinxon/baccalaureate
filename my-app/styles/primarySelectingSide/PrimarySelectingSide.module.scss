@@ -1,11 +1,19 @@
+.first_line {
+  color: white;
+  margin-left: 10px;
+}
+
 .Container {
   position: relative;
   width: 100%;
   overflow: hidden;
   transition: all 1s ease;
   padding: 0px;
-  border: 10px solid #212529;
+  border-left: 10px solid #212529;
+  border-right: 10px solid #212529;
+
   box-sizing: border-box;
+
   ul {
     width: 100%;
     color: white;
@@ -16,6 +24,9 @@
 
     li {
       list-style-type: circle;
+      &:hover {
+        color: burlywood;
+      }
     }
   }
 

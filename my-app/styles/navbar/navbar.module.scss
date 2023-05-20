@@ -1,5 +1,7 @@
 .navbar {
   color: white;
+  font-family: serif;
+  letter-spacing: 1px;
   position: fixed;
   top: 0px;
   height: 70px;
@@ -12,6 +14,9 @@
 
   svg {
     color: burlywood;
+    &:hover {
+      color: rgb(181, 119, 39);
+    }
   }
 
   .img {
@@ -23,5 +28,9 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    &:hover {
+      color: burlywood;
+    }
   }
 }
