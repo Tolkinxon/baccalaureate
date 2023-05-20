@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
-import indexSass from '../styles/index.module.scss'
+import indexSass from '../styles/indexModule/index.module.scss'
 import PrimarySelectingSide from '../components/PrimarySelectingSide'
 import Groups from '@/components/Groups'
 import SelectingThemesAndTimes from '@/components/SelectingThemesAndTimes'

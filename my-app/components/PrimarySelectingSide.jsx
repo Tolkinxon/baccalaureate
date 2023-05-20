@@ -1,5 +1,5 @@
 import React from 'react'
-import classes from '../styles/PrimarySelectingSide.module.scss'
+import classes from '../styles/primarySelectingSide/PrimarySelectingSide.module.scss'
 import { useState } from 'react'
 
 const PrimarySelectingSide = () => {
