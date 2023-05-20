@@ -1,4 +1,5 @@
 .navbar {
+  color: white;
   position: fixed;
   top: 0px;
   height: 70px;
@@ -6,10 +7,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: blue;
+  background-color: #263238;
+  padding: 0px 30px;
+
+  svg {
+    color: burlywood;
+  }
 
   .img {
     border-radius: 50px;
+    margin-right: 10px;
   }
 
   div {
