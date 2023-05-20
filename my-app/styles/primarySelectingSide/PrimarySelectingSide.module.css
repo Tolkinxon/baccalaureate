@@ -30,8 +30,8 @@
   z-index: 5;
   cursor: pointer;
 }
-.Container .button:active {
-  color: burlywood;
+.Container .button:hover {
+  color: burlywood !important;
 }
 .Container .button span {
   font-family: sans-serif;

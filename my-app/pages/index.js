@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import indexSass from '../styles/indexModule/index.module.scss'
+import Navbar from '@/components/Navbar'
 import PrimarySelectingSide from '../components/PrimarySelectingSide'
 import Groups from '@/components/Groups'
 import SelectingThemesAndTimes from '@/components/SelectingThemesAndTimes'
@@ -18,6 +19,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={`container-fluid  ${indexSass.Container}`}>
+        <Navbar />
         <div className="row">
           {/************* PMARY SELECTING SIDE **************/}
           <div className="col bg-dark p-0">
