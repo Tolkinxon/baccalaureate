@@ -4,7 +4,6 @@ import indexSass from '../styles/indexModule/index.module.scss'
 import Navbar from '@/components/Navbar'
 import PrimarySelectingSide from '../components/PrimarySelectingSide'
 import Groups from '@/components/Groups'
-import SelectingThemesAndTimes from '@/components/SelectingThemesAndTimes'
 import Information from '@/components/Information'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -20,7 +19,6 @@ export default function Home() {
       </Head>
           <Navbar />
           <PrimarySelectingSide />
-          <SelectingThemesAndTimes />
           <Groups />
           <Information />
       <script src="../styles/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

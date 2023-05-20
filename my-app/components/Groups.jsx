@@ -1,8 +1,30 @@
 import React from 'react'
+import styles from '../styles/groups/groups.module.scss'
 
 const Groups = () => {
   return (
-    <div className='groups'>
+    <div className={`shadow ${styles.groups}`}>
+      <div className="row">
+        <div className="col-2">
+          <p className="fw-bolder">Mavzular</p>
+        </div>
+        <div className="col">
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        <div className="col-2">
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+      </div>
       <table class="table  table-borderless">
         <thead>
           <tr>
