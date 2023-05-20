@@ -8,10 +8,13 @@ const PrimarySelectingSide = () => {
   return (
     <>
       <div
-        className={classes.Container}
-        style={{ height: toggle ? '100px' : '40px' }}
+        className={` ${classes.Container}`}
+        style={{ height: toggle ? '110px' : '45px' }}
       >
-        <button className={classes.button} onClick={() => setToggle(!toggle)}>
+        <button
+          onClick={() => setToggle(!toggle)}
+          className={`${classes.button} ${toggle && classes.active}`}
+        >
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +53,7 @@ const PrimarySelectingSide = () => {
 
         <ul
         // style={{
-        //   transform: toggle ? 'translateY(100px)' : 'translateY(0px)',
+        //   height: toggle ? 'auto' : '34px',
         // }}
         >
           <li>Dars mavzulari</li>
