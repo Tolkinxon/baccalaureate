@@ -1,8 +1,9 @@
 import React from 'react'
-import styles from '../styles/groups/groups.module.scss'
+import styles from '../styles/groups/groupsAttendances.module.scss'
 
-const Groups = () => {
+const GroupsAttendances = () => {
   return (
+   <>
     <div className={`shadow ${styles.groups}`}>
       <div className="row">
         <div className="col-2">
@@ -55,7 +56,8 @@ const Groups = () => {
         </tbody>
       </table>
     </div>
+    </>
   )
 }
 
-export default Groups
+export default GroupsAttendances
