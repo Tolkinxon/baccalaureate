@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import { Inter } from 'next/font/google'
 import indexSass from '../styles/indexModule/index.module.scss'
 import Navbar from '@/components/Navbar'
 import PrimarySelectingSide from '../components/PrimarySelectingSide'
@@ -12,6 +11,11 @@ import GroupsAttendances from '@/components/GroupsAttendances'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
+
+  const findFocus = () => {
+
+  }
   return (
     <>
       <Head>
