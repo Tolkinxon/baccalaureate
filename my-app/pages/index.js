@@ -18,16 +18,16 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-        <Navbar />
-        <PrimarySelectingSide />
-        <div className="d-none">
-          <GroupsThemes />
-        </div>
-        <div className="d-block">
-          <GroupsAttendances />
-        </div>
-        <Information />
-        <script src="../styles/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+      <Navbar />
+      <PrimarySelectingSide />
+      <div className="d-none">
+        <GroupsThemes />
+      </div>
+      <div className="d-block">
+        <GroupsAttendances />
+      </div>
+      <Information />
+      <script src="../styles/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     </>
   )
 }
