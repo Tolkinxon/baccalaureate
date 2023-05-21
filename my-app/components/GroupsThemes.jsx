@@ -17,6 +17,9 @@ const GroupsThemes = () => {
           </select>
         </div>
         <div className="col-2">
+          <input type="date" />
+        </div>
+        <div className="col-2 d-none">
           <select class="form-select" aria-label="Default select example">
             <option selected>Open this select menu</option>
             <option value="1">One</option>
@@ -25,6 +28,7 @@ const GroupsThemes = () => {
           </select>
         </div>
       </div>
+
       <table class="table  table-borderless">
         <thead>
           <tr>
