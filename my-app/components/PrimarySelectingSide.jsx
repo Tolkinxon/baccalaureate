@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import classes from '../styles/primarySelectingSide/PrimarySelectingSide.module.scss'
-import { useState } from 'react'
 
-const PrimarySelectingSide = () => {
+const PrimarySelectingSide = ({ findFocus }) => {
   const [toggle, setToggle] = useState(false)
   const [focus, setFocus] = useState(1)
 
-  
+  useEffect(() => {
+    findFocus(focus)
+  }, [focus])
 
   return (
     <>

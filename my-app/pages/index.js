@@ -6,16 +6,20 @@ import ScientificWorks from '@/components/ScientificWorks'
 import GroupsThemes from '@/components/GroupsThemes'
 import Information from '@/components/Information'
 import GroupsAttendances from '@/components/GroupsAttendances'
+import { useState } from 'react'
 
 
-const inter = Inter({ subsets: ['latin'] })
+
 
 export default function Home() {
 
+  const [focus, setFocus] = useState(1)
 
-  const findFocus = () => {
 
+  const findFocus = (focus) => {
+    setFocus(focus)
   }
+
   return (
     <>
       <Head>
@@ -25,15 +29,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <PrimarySelectingSide />
+      <PrimarySelectingSide findFocus={findFocus}/>
 
-      <div className="d-block">
+      <div className={focus === 1 ? 'd-block' : 'd-none'}>
       <ScientificWorks />
       </div>
-      <div className="d-none">
+      <div className={focus === 2 ? 'd-block' : 'd-none'}>
         <GroupsThemes />
       </div>
-      <div className="d-none">
+      <div className={focus === 3 ? 'd-block' : 'd-none'}>
         <GroupsAttendances />
       </div>
       <Information />
