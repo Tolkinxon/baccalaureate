@@ -8,13 +8,8 @@ import Information from '@/components/Information'
 import GroupsAttendances from '@/components/GroupsAttendances'
 import { useState } from 'react'
 
-
-
-
 export default function Home() {
-
   const [focus, setFocus] = useState(1)
-
 
   const findFocus = (focus) => {
     setFocus(focus)
@@ -29,18 +24,20 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <PrimarySelectingSide findFocus={findFocus}/>
+      <PrimarySelectingSide findFocus={findFocus} />
 
       <div className={focus === 1 ? 'd-block' : 'd-none'}>
-      <ScientificWorks />
+        <ScientificWorks />
       </div>
       <div className={focus === 2 ? 'd-block' : 'd-none'}>
         <GroupsThemes />
+        <Information />
       </div>
       <div className={focus === 3 ? 'd-block' : 'd-none'}>
         <GroupsAttendances />
+        <Information />
       </div>
-      <Information />
+
       <script src="../styles/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     </>
   )

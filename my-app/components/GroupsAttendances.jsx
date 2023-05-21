@@ -22,9 +22,9 @@ const GroupsAttendances = () => {
   return (
     <>
       <div className={`shadow p-4  ${styles.groups}`}>
-        <div className="row align-items-center justify-content-between">
+        <div className="row align-items-center justify-content-between my-4">
           <div className="col-6 align-items-center d-flex">
-            <span className="fw-bolder  me-4">Groups</span>
+            <span className="fw-bolder  me-3">Groups</span>
             <select class="form-select" aria-label="Default select example">
               <option selected>Select the group</option>
               <option value="1">154-19</option>
