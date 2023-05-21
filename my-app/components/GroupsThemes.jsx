@@ -1,7 +1,27 @@
 import React from 'react'
 import styles from '../styles/groups/groupsThemes.module.scss'
+import { useEffect, useState } from 'react'
 
 const GroupsThemes = () => {
+  const [date, setDate] = useState('')
+
+  useEffect(() => {
+    const year = `${new Date().getFullYear()}`
+    const month = `${new Date().getMonth()}`
+    const date = `${new Date().getDate()}`
+
+   
+      setDate(`${year}-${month.length !== 2 ? 0 :  }-${date}`)
+   
+   
+    
+    }
+
+  
+  }, [])
+
+  console.log(date)
+
   return (
     <div className={`shadow ${styles.groups}`}>
       <div className="row">
@@ -17,7 +37,7 @@ const GroupsThemes = () => {
           </select>
         </div>
         <div className="col-2">
-          <input type="date" />
+          <input type="date" value={`${date}`} />
         </div>
         <div className="col-2 d-none">
           <select class="form-select" aria-label="Default select example">
