@@ -7,15 +7,19 @@ const GroupsThemes = () => {
 
   useEffect(() => {
     const year = `${new Date().getFullYear()}`
-    const month = new Date().getMonth() < 10 ? `0${ new Date().getMonth() + 1 }` : `${ new Date().getMonth() + 1 }`
-    const date = new Date().getDate() < 10 ? `0${ new Date().getDate() }` : `${ new Date().getDate() }`
+    const month =
+      new Date().getMonth() < 10
+        ? `0${new Date().getMonth() + 1}`
+        : `${new Date().getMonth() + 1}`
+    const date =
+      new Date().getDate() < 10
+        ? `0${new Date().getDate()}`
+        : `${new Date().getDate()}`
 
     setDate(`${year}-${month}-${date}`)
   }, [])
 
-  console.log(date);
-
-
+  console.log(date)
 
   return (
     <div className={`shadow ${styles.groups}`}>
