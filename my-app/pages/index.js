@@ -3,9 +3,11 @@ import { Inter } from 'next/font/google'
 import indexSass from '../styles/indexModule/index.module.scss'
 import Navbar from '@/components/Navbar'
 import PrimarySelectingSide from '../components/PrimarySelectingSide'
+import ScientificWorks from '@/components/ScientificWorks'
 import GroupsThemes from '@/components/GroupsThemes'
 import Information from '@/components/Information'
 import GroupsAttendances from '@/components/GroupsAttendances'
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,10 +22,14 @@ export default function Home() {
       </Head>
       <Navbar />
       <PrimarySelectingSide />
+
+      <div className="d-block">
+      <ScientificWorks />
+      </div>
       <div className="d-none">
         <GroupsThemes />
       </div>
-      <div className="d-block">
+      <div className="d-none">
         <GroupsAttendances />
       </div>
       <Information />
