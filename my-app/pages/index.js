@@ -20,10 +20,10 @@ export default function Home() {
       </Head>
         <Navbar />
         <PrimarySelectingSide />
-        <div className="d-block">
+        <div className="d-none">
           <GroupsThemes />
         </div>
-        <div className="d-none">
+        <div className="d-block">
           <GroupsAttendances />
         </div>
         <Information />

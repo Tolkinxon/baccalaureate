@@ -22,10 +22,9 @@ const GroupsThemes = () => {
   console.log(date)
 
   return (
-    <div className={`shadow ${styles.groups}`}>
-      <div className="row align-items-center justify-content-between">
-
-        <div className="col-5 d-flex  align-items-center">
+    <div className={`shadow p-4 ${styles.groups}`}>
+      <div className="row align-items-center justify-content-between my-4">
+        <div className="col-6 d-flex  align-items-center">
           <span className="fw-bolder me-3">Mavzular</span>
           <select class="form-select" aria-label="Default select example">
             <option selected>Open this select menu</option>
@@ -35,16 +34,15 @@ const GroupsThemes = () => {
           </select>
         </div>
 
-        <div className="col-2">
+        <div className="col-3">
           <input type="date" value={date} />
         </div>
-        <div className="col-2 ">
-          
+        <div className="col-3 ">
           <select class="form-select" aria-label="Default select example">
-            <option selected>Open this select menu</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            <option>Select the group</option>
+            <option value="1">154-19</option>
+            <option value="2">153-19</option>
+            <option value="3">155-19</option>
           </select>
         </div>
       </div>
