@@ -1,0 +1,46 @@
+{
+  "item": [
+    {
+      "name": "bean",
+      "amount": "43",
+      "protein": "987",
+      "storage": "three months",
+      "id": 5
+    },
+    {
+      "name": "watermelon",
+      "amount": "3432",
+      "protein": "53",
+      "storage": "four months",
+      "id": 7
+    },
+    {
+      "name": "hfty",
+      "amount": "uhiujhb",
+      "protein": "",
+      "storage": "",
+      "id": 8
+    },
+    {
+      "name": "kompyuterlar",
+      "amount": "",
+      "protein": "",
+      "storage": "",
+      "id": 10
+    },
+    {
+      "name": "fkahdf",
+      "amount": "fdsafa",
+      "protein": "fasd",
+      "storage": "fasdfadf",
+      "id": 11
+    },
+    {
+      "name": "jkhkhj",
+      "amount": "",
+      "protein": "",
+      "storage": "",
+      "id": 12
+    }
+  ]
+}

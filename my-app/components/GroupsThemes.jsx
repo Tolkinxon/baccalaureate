@@ -1,8 +1,13 @@
 import React from 'react'
 import styles from '../styles/groups/groupsThemes.module.scss'
 import { useEffect, useState } from 'react'
+import { hello } from './data'
 
-const GroupsThemes = () => {
+
+
+const GroupsThemes = ({ item }) => {
+  console.log(item)
+
   const [date, setDate] = useState('')
 
   useEffect(() => {
@@ -19,8 +24,6 @@ const GroupsThemes = () => {
     setDate(`${year}-${month}-${date}`)
   }, [])
 
-  console.log(date)
-
   return (
     <div className={`shadow p-4 ${styles.groups}`}>
       <div className="row align-items-center justify-content-between my-4">
@@ -30,7 +33,7 @@ const GroupsThemes = () => {
             <option selected>Open this select menu</option>
             <option value="1">One</option>
             <option value="2">Two</option>
-            <option value="3">Three</option> 
+            <option value="3">Three</option>
           </select>
         </div>
 
