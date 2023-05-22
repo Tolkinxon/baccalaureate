@@ -63,8 +63,8 @@ const GroupsThemes = () => {
   return (
     <div className={`shadow p-4 ${styles.groups}`} onClick={(e) => Value(e)}>
       <div className="row align-items-center justify-content-between my-4">
-        <div className="col-6 d-flex  align-items-center">
-          <span className="fw-bolder me-3">Mavzular</span>
+        <div className="col-5 d-flex flex-column">
+          <span className="fw-bolder me-3">Themes</span>
           <select
             class="form-select "
             name="theme"
@@ -77,7 +77,8 @@ const GroupsThemes = () => {
           </select>
         </div>
 
-        <div className="col-3">
+        <div className="col-3 d-flex flex-column">
+          <span className="fw-bolder me-3">Date</span>
           <select
             class="form-select"
             name="date"
@@ -89,24 +90,25 @@ const GroupsThemes = () => {
             <option value="3">Three</option>
           </select>
         </div>
-        <div className="col-3 ">
+        <div className="col-2 ">
           <select
             class="form-select"
             name="group"
             aria-label="Default select example"
           >
-            <option>Select the group</option>
             <option value="154-19">154-19</option>
             <option value="153-19">153-19</option>
             <option value="155-19">155-19</option>
           </select>
         </div>
-        <button
-          className="btn btn-outline-primary "
-          onClick={() => setBtn(!btn)}
-        >
-          select
-        </button>
+        <div className="col-auto ">
+          <button
+            className="btn btn-outline-secondary  rounded-pill"
+            onClick={() => setBtn(!btn)}
+          >
+            submit
+          </button>
+        </div>
       </div>
 
       <table class="table  table-borderless">
