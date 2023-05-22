@@ -63,7 +63,7 @@ const GroupsThemes = () => {
   return (
     <div className={`shadow p-4 ${styles.groups}`} onClick={(e) => Value(e)}>
       <div className="row align-items-center justify-content-between my-4">
-        <div className="col-5 d-flex flex-column">
+        <div className="col-4 d-flex flex-column">
           <span className="fw-bolder me-3">Themes</span>
           <select
             class="form-select "
@@ -90,7 +90,9 @@ const GroupsThemes = () => {
             <option value="3">Three</option>
           </select>
         </div>
-        <div className="col-2 ">
+
+        <div className="col-2   d-flex flex-column">
+          <span className="fw-bolder me-3">Group</span>
           <select
             class="form-select"
             name="group"
@@ -101,9 +103,9 @@ const GroupsThemes = () => {
             <option value="155-19">155-19</option>
           </select>
         </div>
-        <div className="col-auto ">
+        <div className="col-2 ">
           <button
-            className="btn btn-outline-secondary  rounded-pill"
+            className="btn btn-outline-secondary  rounded-pill px-4"
             onClick={() => setBtn(!btn)}
           >
             submit
