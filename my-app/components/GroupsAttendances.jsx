@@ -4,6 +4,26 @@ import { useEffect, useState } from 'react'
 
 const GroupsAttendances = () => {
 
+  const [data, setData] = useState([])
+  const [dataFinal, setDataFinal] = useState([])
+
+  const [groupValue, setGroupValue] = useState('155-19')
+  const [dateValue, setDateValue] = useState('2021-08-03')
+  const [btn, setBtn] = useState(false)
+
+  useEffect(() => {
+    ////////// DATA FETCHING  //////////////
+        const data = fetch(' http://localhost:3001/GroupsThemes')
+          .then((res) => res.json())
+          .then((data) => setData(data))
+      }, [])
+
+////////////////  AUTOMATICALLY BTN SUBMITTING  //////////
+  setTimeout(() => {
+    setBtn(!btn)
+  }, 100)
+////////////////  AUTOMATICALLY BTN SUBMITTING  //////////
+
 
   return (
     <>

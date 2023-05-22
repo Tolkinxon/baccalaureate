@@ -3,7 +3,6 @@ import styles from '../styles/groups/groupsThemes.module.scss'
 import { useEffect, useState } from 'react'
 
 const GroupsThemes = () => {
-  const [date, setDate] = useState('')
   const [data, setData] = useState([])
   const [dataFinal, setDataFinal] = useState([])
 
@@ -12,29 +11,27 @@ const GroupsThemes = () => {
   const [dateValue, setDateValue] = useState('2021-08-03')
   const [btn, setBtn] = useState(false)
 
+
+
   useEffect(() => {
-    const year = `${new Date().getFullYear()}`
-    const month =
-      new Date().getMonth() < 10
-        ? `0${new Date().getMonth() + 1}`
-        : `${new Date().getMonth() + 1}`
-    const date =
-      new Date().getDate() < 10
-        ? `0${new Date().getDate()}`
-        : `${new Date().getDate()}`
-
-    setDate(`${year}-${month}-${date}`)
-
-    //////// DATA FETCHING  //////////////
+////////// DATA FETCHING  //////////////
     const data = fetch(' http://localhost:3001/GroupsThemes')
       .then((res) => res.json())
       .then((data) => setData(data))
   }, [])
 
+
+
+
+////////////////  AUTOMATICALLY BTN SUBMITTING  //////////
   setTimeout(() => {
     setBtn(!btn)
   }, 100)
+////////////////  AUTOMATICALLY BTN SUBMITTING  //////////
 
+
+
+///////////////  FILTER BY SUBMITTING BTN ///////////////
   useEffect(() => {
     const data2 = data.map((res) => {
       if (
@@ -45,11 +42,12 @@ const GroupsThemes = () => {
         return res
       }
     })
-
     const data3 = data2.filter((data) => data !== undefined)
     setDataFinal(data3)
   }, [btn])
+///////////////  FILTER BY SUBMITTING BTN ///////////////
 
+///////////// TAKING VALUES ////////////////
   const Value = (e) => {
     if (e.target.name === 'theme') {
       setThemeValue(e.target.value)
@@ -61,6 +59,8 @@ const GroupsThemes = () => {
       setGroupValue(e.target.value)
     }
   }
+///////////// TAKING VALUES ////////////////
+
 
   return (
     <div className={`shadow p-4 ${styles.groups}`} onClick={(e) => Value(e)}>
