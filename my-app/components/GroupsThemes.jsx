@@ -1,12 +1,12 @@
 import React from 'react'
 import styles from '../styles/groups/groupsThemes.module.scss'
 import { useEffect, useState } from 'react'
-import { hello } from './data'
 
 
 
-const GroupsThemes = ({ item }) => {
-  console.log(item)
+
+const GroupsThemes = () => {
+  
 
   const [date, setDate] = useState('')
 
@@ -22,6 +22,9 @@ const GroupsThemes = ({ item }) => {
         : `${new Date().getDate()}`
 
     setDate(`${year}-${month}-${date}`)
+
+
+    const data = fetch(' http://localhost:3001/item')
   }, [])
 
   return (
