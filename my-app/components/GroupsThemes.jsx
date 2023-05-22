@@ -62,9 +62,9 @@ const GroupsThemes = () => {
 
   return (
     <div className={`shadow p-4 ${styles.groups}`} onClick={(e) => Value(e)}>
-      <div className="row align-items-center justify-content-between my-4">
+      <div className="row align-items-center justify-content-between my-2 mb-4">
         <div className="col-4 d-flex flex-column">
-          <span className="fw-bolder me-3">Themes</span>
+          <span className="fw-bolder  mb-1">Themes</span>
           <select
             class="form-select "
             name="theme"
@@ -78,7 +78,7 @@ const GroupsThemes = () => {
         </div>
 
         <div className="col-3 d-flex flex-column">
-          <span className="fw-bolder me-3">Date</span>
+          <span className="fw-bolder  mb-1">Date</span>
           <select
             class="form-select"
             name="date"
@@ -92,7 +92,7 @@ const GroupsThemes = () => {
         </div>
 
         <div className="col-2   d-flex flex-column">
-          <span className="fw-bolder me-3">Group</span>
+          <span className="fw-bolder mb-1">Group</span>
           <select
             class="form-select"
             name="group"
@@ -103,7 +103,7 @@ const GroupsThemes = () => {
             <option value="155-19">155-19</option>
           </select>
         </div>
-        <div className="col-2 ">
+        <div className="col-2  align-self-end">
           <button
             className="btn btn-outline-secondary  rounded-pill px-4"
             onClick={() => setBtn(!btn)}
