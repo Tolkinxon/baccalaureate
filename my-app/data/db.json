@@ -1,46 +1,52 @@
 {
-  "item": [
+  "GroupsThemes": [
     {
-      "name": "bean",
-      "amount": "43",
-      "protein": "987",
-      "storage": "three months",
+      "name": "Soliyev To'lqinxon",
+      "group": "154-19",
+      "theme": "hayot-faoliyati",
+      "date": "2021-08-03",
+      "score": 3,
+      "id": 1
+    },
+    {
+      "name": "Soliyev To'lqinxon",
+      "group": "154-19",
+      "theme": "hayot-faoliyati",
+      "date": "2021-08-03",
+      "score": 3,
+      "id": 2
+    },
+    {
+      "name": "Soliyev To'lqinxon",
+      "group": "154-19",
+      "theme": "hayot-faoliyati",
+      "date": "2021-08-03",
+      "score": 3,
+      "id": 3
+    },
+    {
+      "name": "Soliyev To'lqinxon",
+      "group": "154-19",
+      "theme": "hayot-faoliyati",
+      "date": "2021-08-03",
+      "score": 3,
+      "id": 4
+    },
+    {
+      "name": "Soliyev To'lqinxon",
+      "group": "154-19",
+      "theme": "hayot-faoliyati",
+      "date": "2021-08-03",
+      "score": 3,
       "id": 5
     },
     {
-      "name": "watermelon",
-      "amount": "3432",
-      "protein": "53",
-      "storage": "four months",
-      "id": 7
-    },
-    {
-      "name": "hfty",
-      "amount": "uhiujhb",
-      "protein": "",
-      "storage": "",
-      "id": 8
-    },
-    {
-      "name": "kompyuterlar",
-      "amount": "",
-      "protein": "",
-      "storage": "",
-      "id": 10
-    },
-    {
-      "name": "fkahdf",
-      "amount": "fdsafa",
-      "protein": "fasd",
-      "storage": "fasdfadf",
-      "id": 11
-    },
-    {
-      "name": "jkhkhj",
-      "amount": "",
-      "protein": "",
-      "storage": "",
-      "id": 12
+      "name": "Soliyev To'lqinxon",
+      "group": "154-19",
+      "theme": "hayot-faoliyati",
+      "date": "2021-08-03",
+      "score": 3,
+      "id": 6
     }
   ]
 }

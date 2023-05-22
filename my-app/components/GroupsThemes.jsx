@@ -2,13 +2,11 @@ import React from 'react'
 import styles from '../styles/groups/groupsThemes.module.scss'
 import { useEffect, useState } from 'react'
 
-
-
-
 const GroupsThemes = () => {
-  
-
   const [date, setDate] = useState('')
+  const [data, setData] = useState([])
+
+  console.log(date);
 
   useEffect(() => {
     const year = `${new Date().getFullYear()}`
@@ -23,9 +21,12 @@ const GroupsThemes = () => {
 
     setDate(`${year}-${month}-${date}`)
 
-
-    const data = fetch(' http://localhost:3001/item')
+    const data = fetch(' http://localhost:3001/GroupsThemes')
+      .then((res) => res.json())
+      .then((data) => setData(data))
   }, [])
+
+
 
   return (
     <div className={`shadow p-4 ${styles.groups}`}>
@@ -33,7 +34,7 @@ const GroupsThemes = () => {
         <div className="col-6 d-flex  align-items-center">
           <span className="fw-bolder me-3">Mavzular</span>
           <select class="form-select" aria-label="Default select example">
-            <option selected>Open this select menu</option>
+            <option value="hayot-faoliyati">Hayot faoliyati</option>
             <option value="1">One</option>
             <option value="2">Two</option>
             <option value="3">Three</option>
@@ -41,7 +42,12 @@ const GroupsThemes = () => {
         </div>
 
         <div className="col-3">
-          <input type="date" value={date} />
+        <select class="form-select" aria-label="Default select example">
+            <option >{date}</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
         </div>
         <div className="col-3 ">
           <select class="form-select" aria-label="Default select example">

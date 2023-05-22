@@ -34,7 +34,12 @@ const GroupsAttendances = () => {
           </div>
 
           <div className="col-3">
-            <input type="date" value={date} />
+            <select class="form-select" aria-label="Default select example">
+              <option>{date}</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
           </div>
         </div>
 
