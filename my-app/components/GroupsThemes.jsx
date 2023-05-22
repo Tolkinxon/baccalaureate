@@ -7,9 +7,9 @@ const GroupsThemes = () => {
   const [data, setData] = useState([])
   const [dataFinal, setDataFinal] = useState([])
 
-  const [themeValue, setThemeValue] = useState('')
-  const [groupValue, setGroupValue] = useState('')
-  const [dateValue, setDateValue] = useState('')
+  const [themeValue, setThemeValue] = useState('hayot')
+  const [groupValue, setGroupValue] = useState('155-19')
+  const [dateValue, setDateValue] = useState('2021-08-03')
   const [btn, setBtn] = useState(false)
 
   useEffect(() => {
@@ -31,7 +31,9 @@ const GroupsThemes = () => {
       .then((data) => setData(data))
   }, [])
 
-  console.log(themeValue, dateValue, groupValue)
+  setTimeout(() => {
+    setBtn(!btn)
+  }, 100)
 
   useEffect(() => {
     const data2 = data.map((res) => {
@@ -60,8 +62,6 @@ const GroupsThemes = () => {
     }
   }
 
-  console.log(dataFinal)
-
   return (
     <div className={`shadow p-4 ${styles.groups}`} onClick={(e) => Value(e)}>
       <div className="row align-items-center justify-content-between my-2 mb-4">
@@ -86,9 +86,8 @@ const GroupsThemes = () => {
             name="date"
             aria-label="Default select example"
           >
-            <option>{date}</option>
-            <option value="2022-08-03">2022-08-03</option>
             <option value="2021-08-03">2021-08-03</option>
+            <option value="2022-08-03">2022-08-03</option>
             <option value="3">Three</option>
           </select>
         </div>
@@ -100,9 +99,9 @@ const GroupsThemes = () => {
             name="group"
             aria-label="Default select example"
           >
-            <option value="154-19">154-19</option>
-            <option value="153-19">153-19</option>
             <option value="155-19">155-19</option>
+            <option value="153-19">153-19</option>
+            <option value="154-19">154-19</option>
           </select>
         </div>
         <div className="col-2  align-self-end">
@@ -124,18 +123,15 @@ const GroupsThemes = () => {
           </tr>
         </thead>
         <tbody>
-          {
-            dataFinal.map((data, idx)=> 
-          (
+          {dataFinal.map((data, idx) => (
             <>
-                <tr key={idx}>
-                  <th scope="row">{idx + 1}</th>
-                  <td>{data.name}</td>
-                  <td>{data.score}</td>
-                </tr>
+              <tr key={idx}>
+                <th scope="row">{idx + 1}</th>
+                <td>{data.name}</td>
+                <td>{data.score}</td>
+              </tr>
             </>
-          ))
-          }
+          ))}
         </tbody>
       </table>
     </div>
