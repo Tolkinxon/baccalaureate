@@ -62,18 +62,17 @@ const Value = (e) => {
           <div className="col-6 align-items-center d-flex">
             <span className="fw-bolder  me-3">Groups</span>
             <select class="form-select" aria-label="Default select example"  name="group">
-              <option selected>Select the group</option>
-              <option value="1">154-19</option>
-              <option value="2">155-19</option>
-              <option value="3">153-19</option>
+            <option value="155-19">155-19</option>
+            <option value="153-19">153-19</option>
+            <option value="154-19">154-19</option>
             </select>
           </div>
 
           <div className="col-3">
             <select class="form-select" aria-label="Default select example"    name="date">
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+            <option value="2021-08-03">2021-08-03</option>
+            <option value="2022-08-03">2022-08-03</option>
+            <option value="3">Three</option>
             </select>
           </div>
 

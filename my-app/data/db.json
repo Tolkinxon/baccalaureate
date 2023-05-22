@@ -6,7 +6,7 @@
       "theme": "hayot-faoliyati",
       "date": "2022-08-03",
       "score": 3,
-      "attendace": true,
+      "attendace": "yo'q",
       "id": 1
     },
     {
@@ -15,7 +15,7 @@
       "theme": "hayot-faoliyati",
       "date": "2021-08-03",
       "score": 4,
-      "attendace": false,
+      "attendace":  "bor",
       "id": 2
     },
     {
@@ -24,7 +24,7 @@
       "theme": "hayot-faoliyati",
       "date": "2021-08-03",
       "score": 5,
-      "attendace": true,
+      "attendace": "yo'q",
       "id": 3
     },
     {
@@ -33,7 +33,7 @@
       "theme": "hayot-faoliyati",
       "date": "2021-08-03",
       "score": 5,
-      "attendace": false,
+      "attendace":  "bor",
       "id": 4
     },
     {
@@ -42,7 +42,7 @@
       "theme": "hayot-faoliyati",
       "date": "2021-08-03",
       "score": 4,
-      "attendace": true,
+      "attendace": "yo'q",
       "id": 5
     },
     {
@@ -51,7 +51,7 @@
       "theme": "hayot-faoliyati",
       "date": "2022-08-03",
       "score": 5,
-      "attendace": false,
+      "attendace": "bor",
       "id": 6
     }
   ]
