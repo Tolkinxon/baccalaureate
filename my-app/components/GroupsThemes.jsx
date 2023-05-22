@@ -43,7 +43,9 @@ const GroupsThemes = () => {
         return res
       }
     })
-    setDataFinal(data2)
+
+    const data3 = data2.filter((data) => data !== undefined)
+    setDataFinal(data3)
   }, [btn])
 
   const Value = (e) => {
@@ -92,7 +94,7 @@ const GroupsThemes = () => {
         </div>
 
         <div className="col-2   d-flex flex-column">
-          <span className="fw-bolder mb-1">Group</span>
+          <span className="fw-bolder mb-1">Groups</span>
           <select
             class="form-select"
             name="group"
@@ -117,29 +119,23 @@ const GroupsThemes = () => {
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <th scope="col">Names</th>
+            <th scope="col">Band score</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
+          {
+            dataFinal.map((data, idx)=> 
+          (
+            <>
+                <tr key={idx}>
+                  <th scope="row">{idx + 1}</th>
+                  <td>{data.name}</td>
+                  <td>{data.score}</td>
+                </tr>
+            </>
+          ))
+          }
         </tbody>
       </table>
     </div>
