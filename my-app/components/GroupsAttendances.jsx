@@ -3,21 +3,7 @@ import styles from '../styles/groups/groupsAttendances.module.scss'
 import { useEffect, useState } from 'react'
 
 const GroupsAttendances = () => {
-  const [date, setDate] = useState('')
 
-  useEffect(() => {
-    const year = `${new Date().getFullYear()}`
-    const month =
-      new Date().getMonth() < 10
-        ? `0${new Date().getMonth() + 1}`
-        : `${new Date().getMonth() + 1}`
-    const date =
-      new Date().getDate() < 10
-        ? `0${new Date().getDate()}`
-        : `${new Date().getDate()}`
-
-    setDate(`${year}-${month}-${date}`)
-  }, [])
 
   return (
     <>
