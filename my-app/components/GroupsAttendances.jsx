@@ -25,13 +25,43 @@ const GroupsAttendances = () => {
 ////////////////  AUTOMATICALLY BTN SUBMITTING  //////////
 
 
+
+///////////////  FILTER BY SUBMITTING BTN ///////////////
+useEffect(() => {
+  const data2 = data.map((res) => {
+    if (
+      res.date.includes(dateValue) &&
+      res.group.includes(groupValue)
+    ) {
+      return res
+    }
+  })
+  const data3 = data2.filter((data) => data !== undefined)
+  setDataFinal(data3)
+}, [btn])
+///////////////  FILTER BY SUBMITTING BTN ///////////////
+
+
+///////////// TAKING VALUES ////////////////
+const Value = (e) => {
+
+  if (e.target.name === 'date') {
+    setDateValue(e.target.value)
+  }
+  if (e.target.name === 'group') {
+    setGroupValue(e.target.value)
+  }
+}
+///////////// TAKING VALUES ////////////////
+
+
   return (
     <>
-      <div className={`shadow p-4  ${styles.groups}`}>
+      <div className={`shadow p-4  ${styles.groups}`}  onClick={(e) => Value(e)}>
         <div className="row align-items-center justify-content-between my-4">
           <div className="col-6 align-items-center d-flex">
             <span className="fw-bolder  me-3">Groups</span>
-            <select class="form-select" aria-label="Default select example">
+            <select class="form-select" aria-label="Default select example"  name="group">
               <option selected>Select the group</option>
               <option value="1">154-19</option>
               <option value="2">155-19</option>
@@ -40,44 +70,43 @@ const GroupsAttendances = () => {
           </div>
 
           <div className="col-3">
-            <select class="form-select" aria-label="Default select example">
-              <option>{date}</option>
+            <select class="form-select" aria-label="Default select example"    name="date">
               <option value="1">One</option>
               <option value="2">Two</option>
               <option value="3">Three</option>
             </select>
           </div>
+
+          <div className="col-2  align-self-end">
+          <button
+            className="btn btn-outline-secondary  rounded-pill px-4"
+            onClick={() => setBtn(!btn)}
+          >
+            submit
+          </button>
+        </div>
         </div>
 
         <table class="table  table-borderless">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">Handle</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colspan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
-          </tbody>
-        </table>
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Names</th>
+            <th scope="col">Attendance</th>
+          </tr>
+        </thead>
+        <tbody>
+          {dataFinal.map((data, idx) => (
+            <>
+              <tr key={idx}>
+                <th scope="row">{idx + 1}</th>
+                <td>{data.name}</td>
+                <td>{data.attendace}</td>
+              </tr>
+            </>
+          ))}
+        </tbody>
+      </table>
       </div>
     </>
   )
