@@ -30,7 +30,7 @@ export default function Home() {
         <ScientificWorks />
       </div>
       <div className={focus === 2 ? 'd-block' : 'd-none'}>
-        <GroupsThemes />
+        <GroupsThemes focus={focus}/>
         <Information />
       </div>
       <div className={focus === 3 ? 'd-block' : 'd-none'}>

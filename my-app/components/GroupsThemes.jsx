@@ -3,7 +3,7 @@ import styles from '../styles/groups/groupsThemes.module.scss'
 import { useEffect, useState } from 'react'
 import takingData from '../services/'
 
-const GroupsThemes = () => {
+const GroupsThemes = ({ focus }) => {
   const [data, setData] = useState([])
   const [dataFinal, setDataFinal] = useState([])
 
@@ -18,20 +18,10 @@ const GroupsThemes = () => {
   }
 
   useEffect(() => {
-
     DaTa().then((res) => {
       setData(res)
     })
-
-    setTimeout(() => {
-    setBtn(!btn)
-  }, 100)
-
   }, [])
-
-  ////////////////  AUTOMATICALLY BTN SUBMITTING  //////////
-
-  ////////////////  AUTOMATICALLY BTN SUBMITTING  //////////
 
   ///////////////  FILTER BY SUBMITTING BTN ///////////////
   useEffect(() => {
@@ -47,9 +37,21 @@ const GroupsThemes = () => {
     const data3 = data2.filter((data) => data !== undefined)
     setDataFinal(data3)
   }, [btn])
-  ///////////////  FILTER BY SUBMITTING BTN ///////////////
 
-  console.log(dataFinal)
+  useEffect(() => {
+    const data2 = data.map((res) => {
+      if (
+        res.node.theme.includes(themeValue) &&
+        res.node.date.includes(dateValue) &&
+        res.node.group.includes(groupValue)
+      ) {
+        return res
+      }
+    })
+    const data3 = data2.filter((data) => data !== undefined)
+    setDataFinal(data3)
+  }, [focus])
+  ///////////////  FILTER BY SUBMITTING BTN ///////////////
 
   ///////////// TAKING VALUES ////////////////
   const Value = (e) => {
@@ -62,6 +64,7 @@ const GroupsThemes = () => {
     if (e.target.name === 'group') {
       setGroupValue(e.target.value)
     }
+    setBtn(!btn)
   }
   ///////////// TAKING VALUES ////////////////
 
@@ -106,16 +109,6 @@ const GroupsThemes = () => {
             <option value="153-19">153-19</option>
             <option value="155-19">155-19</option>
           </select>
-        </div>
-        <div className="col">
-          <button
-            className="btn btn-outline-secondary"
-            onClick={() => {
-              setBtn(!btn)
-            }}
-          >
-            submit
-          </button>
         </div>
       </div>
 
