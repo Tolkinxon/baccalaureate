@@ -18,20 +18,19 @@ const GroupsThemes = () => {
   }
 
   useEffect(() => {
-    ////////// DATA FETCHING  //////////////
-    // const data = fetch(' http://localhost:3001/GroupsThemes')
-    //   .then((res) => res.json())
-    //   .then((data) => setData(data))
 
     DaTa().then((res) => {
       setData(res)
     })
+
+    setTimeout(() => {
+    setBtn(!btn)
+  }, 100)
+
   }, [])
 
   ////////////////  AUTOMATICALLY BTN SUBMITTING  //////////
-  // setTimeout(() => {
-  //   setBtn(!btn)
-  // }, 100)
+
   ////////////////  AUTOMATICALLY BTN SUBMITTING  //////////
 
   ///////////////  FILTER BY SUBMITTING BTN ///////////////
