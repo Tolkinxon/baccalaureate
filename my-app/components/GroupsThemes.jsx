@@ -8,8 +8,8 @@ const GroupsThemes = () => {
   const [dataFinal, setDataFinal] = useState([])
 
   const [themeValue, setThemeValue] = useState('hayot')
-  const [groupValue, setGroupValue] = useState('155-19')
-  const [dateValue, setDateValue] = useState('2021-08-03')
+  const [groupValue, setGroupValue] = useState('154-19')
+  const [dateValue, setDateValue] = useState('2022-08-03')
   const [btn, setBtn] = useState(false)
 
   const DaTa = async () => {
@@ -90,8 +90,8 @@ const GroupsThemes = () => {
             name="date"
             aria-label="Default select example"
           >
-            <option value="2021-08-03">2021-08-03</option>
             <option value="2022-08-03">2022-08-03</option>
+            <option value="2021-08-03">2021-08-03</option>
             <option value="3">Three</option>
           </select>
         </div>
@@ -103,9 +103,9 @@ const GroupsThemes = () => {
             name="group"
             aria-label="Default select example"
           >
-            <option value="155-19">155-19</option>
-            <option value="153-19">153-19</option>
             <option value="154-19">154-19</option>
+            <option value="153-19">153-19</option>
+            <option value="155-19">155-19</option>
           </select>
         </div>
         <div className="col">
