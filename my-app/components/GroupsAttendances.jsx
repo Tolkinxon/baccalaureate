@@ -1,38 +1,50 @@
 import React from 'react'
 import styles from '../styles/groups/groupsAttendances.module.scss'
 import { useEffect, useState } from 'react'
+import takingData from '../services/'
 
-const GroupsAttendances = () => {
+
+const GroupsAttendances = ({focus}) => {
   const [data, setData] = useState([])
   const [dataFinal, setDataFinal] = useState([])
 
-  const [groupValue, setGroupValue] = useState('155-19')
-  const [dateValue, setDateValue] = useState('2021-08-03')
+  const [groupValue, setGroupValue] = useState('154-19')
+  const [dateValue, setDateValue] = useState('2022-08-03')
   const [btn, setBtn] = useState(false)
+
+  const DaTa = async () => {
+    const result = (await takingData()) || []
+    return result
+  }
 
   useEffect(() => {
     ////////// DATA FETCHING  //////////////
-    const data = fetch(' http://localhost:3001/GroupsThemes')
-      .then((res) => res.json())
-      .then((data) => setData(data))
+    DaTa().then((res) => {
+      setData(res)
+    })
   }, [])
 
-  ////////////////  AUTOMATICALLY BTN SUBMITTING  //////////
-  setTimeout(() => {
-    setBtn(!btn)
-  }, 100)
-  ////////////////  AUTOMATICALLY BTN SUBMITTING  //////////
 
   ///////////////  FILTER BY SUBMITTING BTN ///////////////
   useEffect(() => {
     const data2 = data.map((res) => {
-      if (res.date.includes(dateValue) && res.group.includes(groupValue)) {
+      if (res.node.date.includes(dateValue) && res.node.group.includes(groupValue)) {
         return res
       }
     })
     const data3 = data2.filter((data) => data !== undefined)
     setDataFinal(data3)
   }, [btn])
+
+  useEffect(() => {
+    const data2 = data.map((res) => {
+      if (res.node.date.includes(dateValue) && res.node.group.includes(groupValue)) {
+        return res
+      }
+    })
+    const data3 = data2.filter((data) => data !== undefined)
+    setDataFinal(data3)
+  }, [focus])
   ///////////////  FILTER BY SUBMITTING BTN ///////////////
 
   ///////////// TAKING VALUES ////////////////
@@ -43,6 +55,7 @@ const GroupsAttendances = () => {
     if (e.target.name === 'group') {
       setGroupValue(e.target.value)
     }
+    setBtn(!btn)
   }
   ///////////// TAKING VALUES ////////////////
 
@@ -57,9 +70,9 @@ const GroupsAttendances = () => {
               aria-label="Default select example"
               name="group"
             >
-              <option value="155-19">155-19</option>
-              <option value="153-19">153-19</option>
               <option value="154-19">154-19</option>
+              <option value="153-19">153-19</option>
+              <option value="155-19">155-19</option>
             </select>
           </div>
 
@@ -69,8 +82,8 @@ const GroupsAttendances = () => {
               aria-label="Default select example"
               name="date"
             >
-              <option value="2021-08-03">2021-08-03</option>
               <option value="2022-08-03">2022-08-03</option>
+              <option value="2021-08-03">2021-08-03</option>
               <option value="3">Three</option>
             </select>
           </div>
@@ -89,8 +102,8 @@ const GroupsAttendances = () => {
               <>
                 <tr key={idx}>
                   <th scope="row">{idx + 1}</th>
-                  <td>{data.name}</td>
-                  <td>{data.attendace}</td>
+                  <td>{data.node.name}</td>
+                  <td>{data.node.attendace}</td>
                 </tr>
               </>
             ))}

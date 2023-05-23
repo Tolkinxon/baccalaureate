@@ -34,7 +34,7 @@ export default function Home() {
         <Information />
       </div>
       <div className={focus === 3 ? 'd-block' : 'd-none'}>
-        <GroupsAttendances />
+        <GroupsAttendances focus={focus}/>
         <Information />
       </div>
 

@@ -18,6 +18,7 @@ const GroupsThemes = ({ focus }) => {
   }
 
   useEffect(() => {
+    ////////// DATA FETCHING  //////////////
     DaTa().then((res) => {
       setData(res)
     })
