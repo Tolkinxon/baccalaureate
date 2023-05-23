@@ -7,9 +7,9 @@ const GroupsThemes = ({ focus }) => {
   const [data, setData] = useState([])
   const [dataFinal, setDataFinal] = useState([])
 
-  const [themeValue, setThemeValue] = useState('hayot')
-  const [groupValue, setGroupValue] = useState('154-19')
-  const [dateValue, setDateValue] = useState('2022-08-03')
+  const [themeValue, setThemeValue] = useState('Boshqarish')
+  const [groupValue, setGroupValue] = useState('153-19')
+  const [dateValue, setDateValue] = useState('2023-04-02')
   const [btn, setBtn] = useState(false)
 
   const DaTa = async () => {
@@ -79,10 +79,8 @@ const GroupsThemes = ({ focus }) => {
             name="theme"
             aria-label="Default select example"
           >
-            <option value="hayot">Hayot faoliyati</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            <option value="Boshqarish">Boshqarish jarayonlarida axborot texnologiyalari</option>
+            <option value="Intelektual">Intelektual boshqarish nazariyasi</option>
           </select>
         </div>
 
@@ -93,9 +91,9 @@ const GroupsThemes = ({ focus }) => {
             name="date"
             aria-label="Default select example"
           >
-            <option value="2022-08-03">2022-08-03</option>
-            <option value="2021-08-03">2021-08-03</option>
-            <option value="3">Three</option>
+            <option value="2023-04-02">2023-04-02</option>
+            <option value="2023-04-03">2021-04-03</option>
+            <option value="2023-04-04">2021-04-08</option>
           </select>
         </div>
 
@@ -106,8 +104,8 @@ const GroupsThemes = ({ focus }) => {
             name="group"
             aria-label="Default select example"
           >
-            <option value="154-19">154-19</option>
             <option value="153-19">153-19</option>
+            <option value="154-19">154-19</option>
             <option value="155-19">155-19</option>
           </select>
         </div>
