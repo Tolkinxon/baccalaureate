@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from '../styles/groups/groupsThemes.module.scss'
 import { useEffect, useState } from 'react'
+import takingData from '../services/'
 
 const GroupsThemes = () => {
   const [data, setData] = useState([])
@@ -11,27 +12,29 @@ const GroupsThemes = () => {
   const [dateValue, setDateValue] = useState('2021-08-03')
   const [btn, setBtn] = useState(false)
 
+  const DaTa = async () => { 
+    const result = (await takingData()) || []
+    return result
+  }
 
 
   useEffect(() => {
-////////// DATA FETCHING  //////////////
+    ////////// DATA FETCHING  //////////////
     const data = fetch(' http://localhost:3001/GroupsThemes')
       .then((res) => res.json())
       .then((data) => setData(data))
+
+      DaTa().then(res => console.log(res))
+
   }, [])
 
-
-
-
-////////////////  AUTOMATICALLY BTN SUBMITTING  //////////
+  ////////////////  AUTOMATICALLY BTN SUBMITTING  //////////
   setTimeout(() => {
     setBtn(!btn)
   }, 100)
-////////////////  AUTOMATICALLY BTN SUBMITTING  //////////
+  ////////////////  AUTOMATICALLY BTN SUBMITTING  //////////
 
-
-
-///////////////  FILTER BY SUBMITTING BTN ///////////////
+  ///////////////  FILTER BY SUBMITTING BTN ///////////////
   useEffect(() => {
     const data2 = data.map((res) => {
       if (
@@ -45,11 +48,9 @@ const GroupsThemes = () => {
     const data3 = data2.filter((data) => data !== undefined)
     setDataFinal(data3)
   }, [btn])
-///////////////  FILTER BY SUBMITTING BTN ///////////////
+  ///////////////  FILTER BY SUBMITTING BTN ///////////////
 
-
-
-///////////// TAKING VALUES ////////////////
+  ///////////// TAKING VALUES ////////////////
   const Value = (e) => {
     if (e.target.name === 'theme') {
       setThemeValue(e.target.value)
@@ -61,8 +62,7 @@ const GroupsThemes = () => {
       setGroupValue(e.target.value)
     }
   }
-///////////// TAKING VALUES ////////////////
-
+  ///////////// TAKING VALUES ////////////////
 
   return (
     <div className={`shadow p-4 ${styles.groups}`} onClick={(e) => Value(e)}>
@@ -94,7 +94,7 @@ const GroupsThemes = () => {
           </select>
         </div>
 
-        <div className="col-2   d-flex flex-column">
+        <div className="col-3   d-flex flex-column">
           <span className="fw-bolder mb-1">Groups</span>
           <select
             class="form-select"
@@ -105,14 +105,6 @@ const GroupsThemes = () => {
             <option value="153-19">153-19</option>
             <option value="154-19">154-19</option>
           </select>
-        </div>
-        <div className="col-2  align-self-end">
-          <button
-            className="btn btn-outline-secondary  rounded-pill px-4"
-            onClick={() => setBtn(!btn)}
-          >
-            submit
-          </button>
         </div>
       </div>
 
@@ -141,3 +133,10 @@ const GroupsThemes = () => {
 }
 
 export default GroupsThemes
+
+// export async function getStaticProps(){
+//   const DaTa = (await takingData()) || [];
+//   return {
+//     props: DaTa,
+//   }
+// }
