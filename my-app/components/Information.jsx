@@ -3,7 +3,7 @@ import styles from '../styles/information/information.module.scss'
 
 const Information = () => {
   return (
-    <div className={`shadow ${styles.information}`}>
+    <div className={`shadow  ${styles.information}`}>
       <p className="display-6">Ma'lumot</p>
       <table class="table table-borderless">
         <tbody>

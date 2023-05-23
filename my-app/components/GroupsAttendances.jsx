@@ -3,13 +3,12 @@ import styles from '../styles/groups/groupsAttendances.module.scss'
 import { useEffect, useState } from 'react'
 import takingData from '../services/'
 
-
-const GroupsAttendances = ({focus}) => {
+const GroupsAttendances = ({ focus }) => {
   const [data, setData] = useState([])
   const [dataFinal, setDataFinal] = useState([])
 
   const [groupValue, setGroupValue] = useState('154-19')
-  const [dateValue, setDateValue] = useState('2022-08-03')
+  const [dateValue, setDateValue] = useState('2023-04-02')
   const [btn, setBtn] = useState(false)
 
   const DaTa = async () => {
@@ -24,11 +23,13 @@ const GroupsAttendances = ({focus}) => {
     })
   }, [])
 
-
   ///////////////  FILTER BY SUBMITTING BTN ///////////////
   useEffect(() => {
     const data2 = data.map((res) => {
-      if (res.node.date.includes(dateValue) && res.node.group.includes(groupValue)) {
+      if (
+        res.node.date.includes(dateValue) &&
+        res.node.group.includes(groupValue)
+      ) {
         return res
       }
     })
@@ -38,7 +39,10 @@ const GroupsAttendances = ({focus}) => {
 
   useEffect(() => {
     const data2 = data.map((res) => {
-      if (res.node.date.includes(dateValue) && res.node.group.includes(groupValue)) {
+      if (
+        res.node.date.includes(dateValue) &&
+        res.node.group.includes(groupValue)
+      ) {
         return res
       }
     })
@@ -62,7 +66,7 @@ const GroupsAttendances = ({focus}) => {
   return (
     <>
       <div className={`shadow p-4  ${styles.groups}`} onClick={(e) => Value(e)}>
-        <div className="row align-items-center justify-content-between my-4">
+        <div className="row align-items-center justify-content-between my-2 mb-4">
           <div className="col-6 align-items-center d-flex">
             <span className="fw-bolder  me-3">Groups</span>
             <select
@@ -82,9 +86,9 @@ const GroupsAttendances = ({focus}) => {
               aria-label="Default select example"
               name="date"
             >
-              <option value="2022-08-03">2022-08-03</option>
-              <option value="2021-08-03">2021-08-03</option>
-              <option value="3">Three</option>
+              <option value="2023-04-02">2023-04-02</option>
+              <option value="2023-04-03">2023-04-03</option>
+              <option value="2023-04-04">2023-04-04</option>
             </select>
           </div>
         </div>

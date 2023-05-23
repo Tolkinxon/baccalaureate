@@ -79,8 +79,12 @@ const GroupsThemes = ({ focus }) => {
             name="theme"
             aria-label="Default select example"
           >
-            <option value="Boshqarish">Boshqarish jarayonlarida axborot texnologiyalari</option>
-            <option value="Intelektual">Intelektual boshqarish nazariyasi</option>
+            <option value="Boshqarish">
+              Boshqarish jarayonlarida axborot texnologiyalari
+            </option>
+            <option value="Intelektual">
+              Intelektual boshqarish nazariyasi
+            </option>
           </select>
         </div>
 
@@ -92,8 +96,8 @@ const GroupsThemes = ({ focus }) => {
             aria-label="Default select example"
           >
             <option value="2023-04-02">2023-04-02</option>
-            <option value="2023-04-03">2021-04-03</option>
-            <option value="2023-04-04">2021-04-08</option>
+            <option value="2023-04-03">2023-04-03</option>
+            <option value="2023-04-04">2023-04-04</option>
           </select>
         </div>
 
@@ -116,7 +120,9 @@ const GroupsThemes = ({ focus }) => {
           <tr>
             <th scope="col">#</th>
             <th scope="col">Names</th>
-            <th scope="col">Band score</th>
+            <th scope="col text-center bg-primary">
+              <div className=" text-center ">Band score</div>
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -125,7 +131,7 @@ const GroupsThemes = ({ focus }) => {
               <tr key={idx}>
                 <th scope="row">{idx + 1}</th>
                 <td>{data.node.name}</td>
-                <td>{data.node.score}</td>
+                <td className="text-center">{data.node.score}</td>
               </tr>
             </>
           ))}
