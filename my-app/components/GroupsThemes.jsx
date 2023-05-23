@@ -37,7 +37,6 @@ const GroupsThemes = () => {
   ///////////////  FILTER BY SUBMITTING BTN ///////////////
   useEffect(() => {
     const data2 = data.map((res) => {
-      console.log(res.node.score)
       if (
         res.node.theme.includes(themeValue) &&
         res.node.date.includes(dateValue) &&
@@ -50,6 +49,8 @@ const GroupsThemes = () => {
     setDataFinal(data3)
   }, [btn])
   ///////////////  FILTER BY SUBMITTING BTN ///////////////
+
+  console.log(dataFinal)
 
   ///////////// TAKING VALUES ////////////////
   const Value = (e) => {
@@ -107,6 +108,16 @@ const GroupsThemes = () => {
             <option value="154-19">154-19</option>
           </select>
         </div>
+        <div className="col">
+          <button
+            className="btn btn-outline-secondary"
+            onClick={() => {
+              setBtn(!btn)
+            }}
+          >
+            submit
+          </button>
+        </div>
       </div>
 
       <table class="table  table-borderless">
@@ -122,8 +133,8 @@ const GroupsThemes = () => {
             <>
               <tr key={idx}>
                 <th scope="row">{idx + 1}</th>
-                <td>{data.name}</td>
-                <td>{data.score}</td>
+                <td>{data.node.name}</td>
+                <td>{data.node.score}</td>
               </tr>
             </>
           ))}
