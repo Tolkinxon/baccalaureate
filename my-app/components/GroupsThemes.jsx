@@ -12,35 +12,36 @@ const GroupsThemes = () => {
   const [dateValue, setDateValue] = useState('2021-08-03')
   const [btn, setBtn] = useState(false)
 
-  const DaTa = async () => { 
+  const DaTa = async () => {
     const result = (await takingData()) || []
     return result
   }
 
-
   useEffect(() => {
     ////////// DATA FETCHING  //////////////
-    const data = fetch(' http://localhost:3001/GroupsThemes')
-      .then((res) => res.json())
-      .then((data) => setData(data))
+    // const data = fetch(' http://localhost:3001/GroupsThemes')
+    //   .then((res) => res.json())
+    //   .then((data) => setData(data))
 
-      DaTa().then(res => console.log(res))
-
+    DaTa().then((res) => {
+      setData(res)
+    })
   }, [])
 
   ////////////////  AUTOMATICALLY BTN SUBMITTING  //////////
-  setTimeout(() => {
-    setBtn(!btn)
-  }, 100)
+  // setTimeout(() => {
+  //   setBtn(!btn)
+  // }, 100)
   ////////////////  AUTOMATICALLY BTN SUBMITTING  //////////
 
   ///////////////  FILTER BY SUBMITTING BTN ///////////////
   useEffect(() => {
     const data2 = data.map((res) => {
+      console.log(res.node.score)
       if (
-        res.theme.includes(themeValue) &&
-        res.date.includes(dateValue) &&
-        res.group.includes(groupValue)
+        res.node.theme.includes(themeValue) &&
+        res.node.date.includes(dateValue) &&
+        res.node.group.includes(groupValue)
       ) {
         return res
       }
