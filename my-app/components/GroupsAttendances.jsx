@@ -93,12 +93,14 @@ const GroupsAttendances = ({ focus }) => {
           </div>
         </div>
 
-        <table class="table  table-borderless">
+        <table class="table  table-borderless mt-5">
           <thead>
             <tr>
               <th scope="col">#</th>
               <th scope="col">Names</th>
-              <th scope="col">Attendance</th>
+              <th scope="col " className="text-center">
+                Attendance
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -107,7 +109,18 @@ const GroupsAttendances = ({ focus }) => {
                 <tr key={idx}>
                   <th scope="row">{idx + 1}</th>
                   <td>{data.node.name}</td>
-                  <td>{data.node.attendace}</td>
+                  <td
+                    className={`text-center fw-bold ${
+                      data.node.attendance >= 75
+                        ? 'text-success'
+                        : data.node.attendance < 75 &&
+                          data.node.attendance >= 50
+                        ? 'text-warning'
+                        : 'text-danger'
+                    }`}
+                  >
+                    {data.node.attendance}%
+                  </td>
                 </tr>
               </>
             ))}
