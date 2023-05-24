@@ -15,7 +15,7 @@ const Information = () => {
         <span className="ms-4">3</span>
       </div>
       <div className=" d-flex justify-content-between  border-bottom border-success   mb-1">
-        <span className="fw-bold">Dates of subjects :</span>
+        <span className="fw-bold">Dates of Subjects :</span>
         <span className="ms-4">3</span>
       </div>
     </div>

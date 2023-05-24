@@ -19,7 +19,7 @@ const Navbar = () => {
 
       <div>Tashkent State Government Univercity named I.A.Karimov </div>
 
-      <div className=" me-5">
+      <div className=" me-4">
         <Image
           src="/4x4picture.jpg"
           width={40}

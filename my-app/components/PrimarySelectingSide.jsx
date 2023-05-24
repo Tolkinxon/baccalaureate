@@ -29,7 +29,7 @@ const PrimarySelectingSide = ({ findFocus }) => {
             <path d="M8.646 6.646a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 9 8.646 7.354a.5.5 0 0 1 0-.708zm-1.292 0a.5.5 0 0 0-.708 0l-2 2a.5.5 0 0 0 0 .708l2 2a.5.5 0 0 0 .708-.708L5.707 9l1.647-1.646a.5.5 0 0 0 0-.708z" />
           </svg>
 
-          <span>Ilmiy ishlar</span>
+          <span>Scientific Works</span>
         </div>
 
         <div
@@ -54,7 +54,7 @@ const PrimarySelectingSide = ({ findFocus }) => {
                 <path d="M11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-2 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z" />
               </svg>
 
-              <span>Dars Mavzulari & Davomat</span>
+              <span>Lesson Topics & Attendance</span>
             </div>
 
             <svg
@@ -82,13 +82,13 @@ const PrimarySelectingSide = ({ findFocus }) => {
               style={{ color: focus === 2 ? 'burlywood' : 'white' }}
               onClick={() => setFocus(2)}
             >
-              Dars mavzulari
+              Lesson Topics
             </li>
             <li
               style={{ color: focus === 3 ? 'burlywood' : 'white' }}
               onClick={() => setFocus(3)}
             >
-              Davomat
+              Attendance
             </li>
           </ul>
         </div>
