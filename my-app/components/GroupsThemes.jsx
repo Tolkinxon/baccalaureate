@@ -17,14 +17,12 @@ const GroupsThemes = ({ focus }) => {
     return result
   }
 
-
   useEffect(() => {
     ////// DATA FETCHING  //////////////
     DaTa().then((res) => {
       setData(res)
     })
   }, [])
-
 
   ///////////////  FILTER BY SUBMITTING BTN ///////////////
   useEffect(() => {
@@ -75,7 +73,7 @@ const GroupsThemes = ({ focus }) => {
     <div className={`shadow p-4 ${styles.groups}`} onClick={(e) => Value(e)}>
       <div className="row align-items-center justify-content-between my-2 mb-4">
         <div className="col-4 d-flex flex-column">
-          <span className="fw-bolder  mb-1">Themes</span>
+          <span className="fw-bolder  mb-2">Themes</span>
           <select
             class="form-select "
             name="theme"
@@ -91,7 +89,7 @@ const GroupsThemes = ({ focus }) => {
         </div>
 
         <div className="col-3 d-flex flex-column">
-          <span className="fw-bolder  mb-1">Date</span>
+          <span className="fw-bolder  mb-2">Date</span>
           <select
             class="form-select"
             name="date"
@@ -104,7 +102,7 @@ const GroupsThemes = ({ focus }) => {
         </div>
 
         <div className="col-3   d-flex flex-column">
-          <span className="fw-bolder mb-1">Groups</span>
+          <span className="fw-bolder mb-2">Groups</span>
           <select
             class="form-select"
             name="group"
@@ -117,7 +115,7 @@ const GroupsThemes = ({ focus }) => {
         </div>
       </div>
 
-      <table class="table  table-borderless">
+      <table class="table  table-borderless mt-5">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -133,7 +131,17 @@ const GroupsThemes = ({ focus }) => {
               <tr key={idx}>
                 <th scope="row">{idx + 1}</th>
                 <td>{data.node.name}</td>
-                <td className="text-center">{data.node.score}</td>
+                <td
+                  className={`text-center fw-bold  ${
+                    data.node.score >= 4
+                      ? 'text-success'
+                      : data.node.score < 3
+                      ? 'text-danger'
+                      : 'text-warning'
+                  }`}
+                >
+                  {data.node.score}
+                </td>
               </tr>
             </>
           ))}
@@ -144,10 +152,3 @@ const GroupsThemes = ({ focus }) => {
 }
 
 export default GroupsThemes
-
-// export async function getStaticProps(){
-//   const DaTa = (await takingData()) || [];
-//   return {
-//     props: DaTa,
-//   }
-// }

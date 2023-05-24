@@ -7,7 +7,7 @@ const GroupsAttendances = ({ focus }) => {
   const [data, setData] = useState([])
   const [dataFinal, setDataFinal] = useState([])
 
-  const [groupValue, setGroupValue] = useState('154-19')
+  const [groupValue, setGroupValue] = useState('153-19')
   const [dateValue, setDateValue] = useState('2023-04-02')
   const [btn, setBtn] = useState(false)
 
@@ -67,22 +67,23 @@ const GroupsAttendances = ({ focus }) => {
     <>
       <div className={`shadow p-4  ${styles.groups}`} onClick={(e) => Value(e)}>
         <div className="row align-items-center justify-content-between my-2 mb-4">
-          <div className="col-6 align-items-center d-flex">
-            <span className="fw-bolder  me-3">Groups</span>
+          <div className="col-6 ">
+            <span className="fw-bolder ">Groups</span>
             <select
-              class="form-select"
+              class="form-select  mt-2"
               aria-label="Default select example"
               name="group"
             >
-              <option value="154-19">154-19</option>
               <option value="153-19">153-19</option>
+              <option value="154-19">154-19</option>
               <option value="155-19">155-19</option>
             </select>
           </div>
 
           <div className="col-3">
+            <span className="fw-bolder ">Date</span>
             <select
-              class="form-select"
+              class="form-select  mt-2"
               aria-label="Default select example"
               name="date"
             >
@@ -108,7 +109,7 @@ const GroupsAttendances = ({ focus }) => {
               <>
                 <tr key={idx}>
                   <th scope="row">{idx + 1}</th>
-                  <td>{data.node.name}</td>
+                  <td >{data.node.name}</td>
                   <td
                     className={`text-center fw-bold ${
                       data.node.attendance >= 75
