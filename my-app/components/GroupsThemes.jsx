@@ -2,12 +2,9 @@ import React from 'react'
 import styles from '../styles/groups/groupsThemes.module.scss'
 import { useEffect, useState } from 'react'
 import takingData from '../services/'
-import { takingData2 } from '../services/'
 
 const GroupsThemes = ({ focus }) => {
   const [data, setData] = useState([])
-  const [data2, setData2] = useState([])
-
   const [dataFinal, setDataFinal] = useState([])
 
   const [themeValue, setThemeValue] = useState('Boshqarish')
@@ -20,19 +17,10 @@ const GroupsThemes = ({ focus }) => {
     return result
   }
 
-  const DaTa2 = async () => {
-    const result = (await takingData2()) || []
-    return result
-  }
 
   useEffect(() => {
-    //////// DATA FETCHING  //////////////
-    // DaTa().then((res) => {
-    //   setData(res)
-    // })
-
-    ////////// DATA FETCHING2  //////////////
-    DaTa2().then((res) => {
+    ////// DATA FETCHING  //////////////
+    DaTa().then((res) => {
       setData(res)
     })
   }, [])
