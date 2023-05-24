@@ -3,18 +3,18 @@ import styles from '../styles/information/information.module.scss'
 
 const Information = () => {
   return (
-    <div className={`shadow  p-4 ${styles.information}`}>
-      <p className="text-center ">Total informations :</p>
+    <div className={`shadow rounded-3  p-4 ${styles.information}`}>
+      <p className="text-center fw-bold h5 mb-4  ">Total informations :</p>
 
-      <div className=" d-flex justify-content-between mb-1">
+      <div className=" d-flex justify-content-between border-bottom border-success  mb-3">
         <span className="fw-bold">Amount Subjects :</span>
         <span className="">2</span>
       </div>
-      <div className=" d-flex justify-content-between  mb-1">
+      <div className=" d-flex justify-content-between  border-bottom border-success   mb-3">
         <span className="fw-bold">Amount Groups :</span>
         <span className="ms-4">3</span>
       </div>
-      <div className=" d-flex justify-content-between  mb-1">
+      <div className=" d-flex justify-content-between  border-bottom border-success   mb-1">
         <span className="fw-bold">Dates of subjects :</span>
         <span className="ms-4">3</span>
       </div>
