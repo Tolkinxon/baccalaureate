@@ -85,13 +85,13 @@ const ScientificWorks = () => {
               </div>
               <div class="col-md-8">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
+                  <h5 class="card-title">Yekoterina Jukovskaya</h5>
                   <p class="card-text">
-                    This is a wider card with supporting text below as a natural
+                  Philologist: history of works of art in the XIV century
                   </p>
                   <p class="card-text">
                     <small class="text-body-secondary">
-                      Last updated 3 mins ago
+                      2021.04.01
                     </small>
                   </p>
                 </div>
