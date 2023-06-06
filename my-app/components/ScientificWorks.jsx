@@ -116,13 +116,13 @@ const ScientificWorks = () => {
               </div>
               <div class="col-md-8">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
+                  <h5 class="card-title">Ronald Ayzekson</h5>
                   <p class="card-text">
-                    This is a wider card with supporting text below as a natural
+                  Physical: Physical processes that increase the velocity of neutral particles
                   </p>
                   <p class="card-text">
                     <small class="text-body-secondary">
-                      Last updated 3 mins ago
+                      2023.05.06
                     </small>
                   </p>
                 </div>
