@@ -23,13 +23,13 @@ const ScientificWorks = () => {
               </div>
               <div class="col-md-8">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
+                  <h5 class="card-title">John Taylor</h5>
                   <p class="card-text">
-                    This is a wider card with supporting text below as a natural
+                  Exact Sciences: Integrating Matrices into a Broadband Surveillance System
                   </p>
                   <p class="card-text">
                     <small class="text-body-secondary">
-                      Last updated 3 mins ago
+                      2023.02.01
                     </small>
                   </p>
                 </div>
@@ -54,13 +54,13 @@ const ScientificWorks = () => {
               </div>
               <div class="col-md-8">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
+                  <h5 class="card-title">Bob Richard</h5>
                   <p class="card-text">
                     This is a wider card with supporting text below as a natural
                   </p>
                   <p class="card-text">
                     <small class="text-body-secondary">
-                      Last updated 3 mins ago
+                      2022.03.07
                     </small>
                   </p>
                 </div>
