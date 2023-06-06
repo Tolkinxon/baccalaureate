@@ -87,7 +87,7 @@ const ScientificWorks = () => {
                 <div class="card-body">
                   <h5 class="card-title">Yekoterina Jukovskaya</h5>
                   <p class="card-text">
-                  Philologist: history of works of art in the XIV century
+                  Philologist: History of works of art in the XIV century
                   </p>
                   <p class="card-text">
                     <small class="text-body-secondary">
@@ -147,13 +147,13 @@ const ScientificWorks = () => {
               </div>
               <div class="col-md-8">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
+                  <h5 class="card-title">Henri Wick</h5>
                   <p class="card-text">
-                    This is a wider card with supporting text below as a natural
+                  Geologist: Movement of natural bodies
                   </p>
                   <p class="card-text">
                     <small class="text-body-secondary">
-                      Last updated 3 mins ago
+                      2021.05.07
                     </small>
                   </p>
                 </div>
@@ -178,13 +178,13 @@ const ScientificWorks = () => {
               </div>
               <div class="col-md-8">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
+                  <h5 class="card-title">Angelina Smith</h5>
                   <p class="card-text">
-                    This is a wider card with supporting text below as a natural
+                  Veterinarian: Animal population recovery
                   </p>
                   <p class="card-text">
                     <small class="text-body-secondary">
-                      Last updated 3 mins ago
+                      2020.04.01
                     </small>
                   </p>
                 </div>
