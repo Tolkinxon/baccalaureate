@@ -56,7 +56,7 @@ const ScientificWorks = () => {
                 <div class="card-body">
                   <h5 class="card-title">Bob Richard</h5>
                   <p class="card-text">
-                    This is a wider card with supporting text below as a natural
+                  Echolog: A bio-catalyst that accelerates the process of rotting waste
                   </p>
                   <p class="card-text">
                     <small class="text-body-secondary">
