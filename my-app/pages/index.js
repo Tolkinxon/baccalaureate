@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import indexSass from '../styles/indexModule/index.module.scss'
 import Navbar from '@/components/Navbar'
 import PrimarySelectingSide from '../components/PrimarySelectingSide'
 import ScientificWorks from '@/components/ScientificWorks'
