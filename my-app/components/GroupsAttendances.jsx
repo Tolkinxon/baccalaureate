@@ -66,7 +66,24 @@ const GroupsAttendances = ({ focus }) => {
   return (
     <>
       <div className={`shadow p-4  ${styles.groups}`} onClick={(e) => Value(e)}>
-        <div className="row align-items-center justify-content-between my-2 mb-4">
+        <div className="row align-items-center my-2 mb-4">
+
+        <div className="col-4 d-flex flex-column">
+          <span className="fw-bolder  mb-2">Themes</span>
+          <select
+            class="form-select "
+            name="theme"
+            aria-label="Default select example"
+          >
+            <option value="Boshqarish">
+              Boshqarish jarayonlarida axborot texnologiyalari
+            </option>
+            <option value="Intelektual">
+              Intelektual boshqarish nazariyasi
+            </option>
+          </select>
+        </div>  
+
           <div className="col-6 ">
             <span className="fw-bolder ">Groups</span>
             <select
@@ -80,7 +97,7 @@ const GroupsAttendances = ({ focus }) => {
             </select>
           </div>
 
-          <div className="col-3">
+          <div className="col">
             <span className="fw-bolder ">Date</span>
             <select
               class="form-select  mt-2"
