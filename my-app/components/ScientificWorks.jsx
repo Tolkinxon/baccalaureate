@@ -6,7 +6,7 @@ const ScientificWorks = () => {
   return (
     <div className={` shadow ${styles.groups} ${styles.groups2}`}>
       <div className="row gy-5">
-        {/* FIRST */}
+    
         <div className="col-6">
           <div class="card mb-3" style={{ maxWidth: '550px' }}>
             <div class="row g-0">
@@ -38,7 +38,7 @@ const ScientificWorks = () => {
           </div>
         </div>
         <div className="col-6">
-          {/* SECOND */}
+      
           <div class="card mb-3" style={{ maxWidth: '550px' }}>
             <div class="row g-0">
               <div
@@ -69,7 +69,7 @@ const ScientificWorks = () => {
           </div>
         </div>
         <div className="col-6">
-          {/* THIRD */}
+   
           <div class="card mb-3" style={{ maxWidth: '550px' }}>
             <div class="row g-0">
               <div
@@ -100,7 +100,7 @@ const ScientificWorks = () => {
           </div>
         </div>
         <div className="col-6">
-          {/* FOURTH */}
+      
           <div class="card mb-3" style={{ maxWidth: '550px' }}>
             <div class="row g-0">
               <div
@@ -131,7 +131,7 @@ const ScientificWorks = () => {
           </div>
         </div>
         <div className="col-6">
-          {/* FIFTH */}
+        
           <div class="card mb-3" style={{ maxWidth: '550px' }}>
             <div class="row g-0">
               <div
@@ -162,7 +162,7 @@ const ScientificWorks = () => {
           </div>
         </div>
         <div className="col-6">
-          {/* SIXTH */}
+       
           <div class="card mb-3" style={{ maxWidth: '550px' }}>
             <div class="row g-0">
               <div
@@ -193,7 +193,7 @@ const ScientificWorks = () => {
           </div>
         </div>
         <div className="col-6">
-          {/* SEVENTH */}
+       
           <div class="card mb-3" style={{ maxWidth: '550px' }}>
             <div class="row g-0">
               <div
@@ -224,7 +224,7 @@ const ScientificWorks = () => {
           </div>
         </div>
         <div className="col-6">
-          {/* EIGHTHT  */}
+        
           <div class="card mb-3" style={{ maxWidth: '550px' }}>
             <div class="row g-0">
               <div
