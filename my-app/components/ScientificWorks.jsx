@@ -5,7 +5,8 @@ import Image from 'next/image'
 const ScientificWorks = () => {
   return (
     <div className={` shadow ${styles.groups} ${styles.groups2}`}>
-      <div className="row gy-5">
+      <iframe src="https://kun.uz/" width={1000} height={1500}></iframe>
+      {/* <div className="row gy-5">
     
         <div className="col-6">
           <div class="card mb-3" style={{ maxWidth: '550px' }}>
@@ -254,7 +255,7 @@ const ScientificWorks = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }
