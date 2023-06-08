@@ -82,13 +82,13 @@ const PrimarySelectingSide = ({ findFocus }) => {
               style={{ color: focus === 2 ? 'burlywood' : 'white' }}
               onClick={() => setFocus(2)}
             >
-              Lesson Topics
+              Dars mavzulari
             </li>
             <li
               style={{ color: focus === 3 ? 'burlywood' : 'white' }}
               onClick={() => setFocus(3)}
             >
-              Attendance
+              Davomat
             </li>
           </ul>
         </div>
