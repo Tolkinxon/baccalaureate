@@ -69,7 +69,7 @@ const GroupsAttendances = ({ focus }) => {
         <div className="row align-items-center my-2 mb-4">
 
         <div className="col-4 d-flex flex-column">
-          <span className="fw-bolder  mb-2">Themes</span>
+          <span className="fw-bolder  mb-2">Mavzular</span>
           <select
             class="form-select "
             name="theme"
@@ -85,7 +85,7 @@ const GroupsAttendances = ({ focus }) => {
         </div>  
 
           <div className="col-6 ">
-            <span className="fw-bolder ">Groups</span>
+            <span className="fw-bolder ">Guruhlar</span>
             <select
               class="form-select  mt-2"
               aria-label="Default select example"
@@ -98,7 +98,7 @@ const GroupsAttendances = ({ focus }) => {
           </div>
 
           <div className="col">
-            <span className="fw-bolder ">Date</span>
+            <span className="fw-bolder ">Sana</span>
             <select
               class="form-select  mt-2"
               aria-label="Default select example"
@@ -115,9 +115,9 @@ const GroupsAttendances = ({ focus }) => {
           <thead>
             <tr>
               <th scope="col">#</th>
-              <th scope="col">Names</th>
+              <th scope="col">Ismlar</th>
               <th scope="col " className="text-center">
-                Attendance
+                Davomat
               </th>
             </tr>
           </thead>

@@ -73,7 +73,7 @@ const GroupsThemes = ({ focus }) => {
     <div className={`shadow p-4 ${styles.groups}`} onClick={(e) => Value(e)}>
       <div className="row align-items-center justify-content-between my-2 mb-4">
         <div className="col-4 d-flex flex-column">
-          <span className="fw-bolder  mb-2">Themes</span>
+          <span className="fw-bolder  mb-2">Mavzular</span>
           <select
             class="form-select "
             name="theme"
@@ -89,7 +89,7 @@ const GroupsThemes = ({ focus }) => {
         </div>
 
         <div className="col-3 d-flex flex-column">
-          <span className="fw-bolder  mb-2">Date</span>
+          <span className="fw-bolder  mb-2">Sana</span>
           <select
             class="form-select"
             name="date"
@@ -102,7 +102,7 @@ const GroupsThemes = ({ focus }) => {
         </div>
 
         <div className="col-3   d-flex flex-column">
-          <span className="fw-bolder mb-2">Groups</span>
+          <span className="fw-bolder mb-2">Guruhlar</span>
           <select
             class="form-select"
             name="group"
@@ -119,9 +119,9 @@ const GroupsThemes = ({ focus }) => {
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">Names</th>
+            <th scope="col">Ismlar</th>
             <th scope="col text-center bg-primary">
-              <div className=" text-center ">Band score</div>
+              <div className=" text-center ">Baholar</div>
             </th>
           </tr>
         </thead>
