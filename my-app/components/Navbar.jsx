@@ -17,7 +17,7 @@ const Navbar = () => {
         <path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466 4.176 9.032Z" />
       </svg>
 
-      <div>Tashkent State Government Univercity named I.A.Karimov </div>
+      <div>I.A.Karimov nomidagi Toshkent Davlat Texnika Universtiteti</div>
 
       <div className=" me-4">
         <Image
@@ -26,7 +26,7 @@ const Navbar = () => {
           height={40}
           className={`${styles.img}`}
         />
-        <div>Teacher: John Taylor</div>
+        <div>O'qituvchi: Mamirov Sardor</div>
       </div>
     </div>
   )
