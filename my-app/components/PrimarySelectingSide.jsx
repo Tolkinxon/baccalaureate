@@ -56,7 +56,6 @@ const PrimarySelectingSide = ({ findFocus }) => {
 
               <span>Dars mavzulari va Davomat</span>
             </div>
-            <h1>hello world</h1>
 
             <svg
               style={{
